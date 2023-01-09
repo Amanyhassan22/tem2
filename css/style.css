@@ -1,0 +1,399 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    height: 3000px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.list-main{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    padding: 20px 0;
+}
+.header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-main img{
+max-width: 130px;
+}
+.header-main nav{
+flex:3;
+text-align: center;
+}
+.header-main  .logo-main{
+text-align: center;
+}
+.header-main ul li {
+    display: inline-block;
+}
+.header-main ul li a , .header-main ul li a{
+    color:rgb(197, 65, 109);
+    font-size: 20px;
+}
+.header-main nav ul li .tiem-main{
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+    position: relative;
+}
+.header-main nav ul li .tiem-main:before,
+.header-main nav ul li .tiem-main:after{
+content:"";
+position: absolute;
+border-style: solid; 
+left: 0;
+top:0; 
+transition: transform 0.3s;
+}
+.header-main nav ul li .tiem-main:before{
+    border-width:0px 3px;
+    height: 100%; 
+    width: 100%;
+    transform: scale3d(1,0,1);
+}
+.header-main nav ul li .tiem-main:hover:before{
+ transform: scale3d(1,1,1);
+}
+.header-main nav ul li .tiem-main:after{
+border-width: 2px 0;
+height: 91%; 
+width: 98%;
+transform: scale3d(0,1,1);
+transform-origin: left;
+}
+.header-main nav ul li .tiem-main:hover:after{
+ transform: scale3d(1,1,1);
+ transition-delay: .1s;
+}
+.header-main .logo-main ul li  {
+    padding: 5px ;
+}
+.header-main .logo-main ul i.-mony {
+ position: relative;
+ margin-right: 40px;
+}
+.header-main .logo-main .-mony:after{
+    position: absolute;
+    content: "0";
+    background-color: rgb(225, 142, 169);
+    color:#ffff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    bottom: -10px;
+}
+.makeup{
+position: relative;
+}
+.makeup-main{
+    position: absolute;
+    width: 500px;
+    border: 2px solid rgb(220, 100, 162);
+    background-color:black;
+    padding: 15px;
+    transform: scale(0);
+    transition: transform .5s , visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.makeup:hover .makeup-main{
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+.makeup-main ul{
+    display: table-cell;
+    text-align: left;
+}
+.makeup-main li .mon {
+    display: block;
+    border-bottom: 2px dotted  palevioletred;
+}
+.makeup-main ul li {
+    line-height: 2;
+}
+.main{
+    margin: auto;
+    height: 100vh;
+   background: url(../images/MONY\ \(19\).jpg) no-repeat;
+   background-size: 100%;
+}
+/* //////////////////////////////////////////الجزء الاول الهيدر والصوره //////////////////////////////////// */
+.products-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.Special-items{
+    display: flex;
+}
+.Special-items img{
+    width: 100%;
+    margin-bottom: 35px;
+}
+.Special-item {
+    position: relative;
+    transition: transform 0.5s;
+    margin-left: 20px;
+}
+.Special-item:nth-child(1):hover{
+    transform: scale(1.1);
+}
+.Special-item:nth-child(2):hover{
+    transform: scale(1.1);
+}
+.Special-item:nth-child(3):hover{
+    transform: scale(1.1);
+}
+.Special-item:nth-child(4):hover{
+    transform: scale(1.1);
+}
+.Special-item .icon{
+    width: 30px;
+    height: 30px;
+    background-color:palevioletred;
+    color:black;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 10;
+    visibility: hidden;
+    opacity: 0;
+transition: opacity 0.1;
+}
+.Special-item:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}
+.Special-item-main{
+    color: rgb(243, 130, 179);
+    font-weight:700;
+ }
+.Special-item-title{
+    font-size: 20px;
+}
+/* /////////////////////////////////////////////الجزء التاني//////////////////////////////////////////////// */
+.Penelope {
+    margin:30px 0;
+    display: flex;
+}
+.section-padding {
+    padding: 30px 0;
+}
+.products-main {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.products-main .link{
+    display: block;
+    width: 100px;
+    margin: auto;
+    height: 2px;
+    background-color: palevioletred;
+    transition: width .5s;
+}
+.products-main:hover .link{
+    width: 150px;
+}
+.Penelope-main .mony{
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+.Penelope-main .mony .icon{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+    color:palevioletred;
+}
+.Penelope-main .mony +p{ 
+    line-height: 1.7;
+}
+.Penelope-main .Astrid span{
+     display: inline-block;
+     width:50px;
+     height: 3px;
+     background:palevioletred;
+     margin-left: 10px;
+}
+.Penelope-main .Astrid{
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.Penelope-main{
+    flex:2;
+    background: #f7f3ef;
+    padding: 20px;
+    position: relative;
+}
+.discount{
+    flex: 1;
+    height: 300px;
+    position: relative;
+}
+.discount:nth-child(2){
+    background-image: url(../images/MONY\ \(3\).jpg );
+    background-size: cover;
+    margin:0 20px;
+    transition: transform 0.5s;
+}
+.discount:nth-child(2):hover{
+    transform: scale(1.1);
+}
+.discount:nth-child(3){
+    background-image: url(../images/MONY\ \(21\).jpg);
+    background-size: cover; 
+    transition: transform .5s;
+}
+.discount:nth-child(3):hover{
+    transform: scale(1.1);
+}
+.discount-info{
+    position: absolute;
+    top:20px;
+    left: 15px;
+}
+.discount-info h2{
+    font-size: 25px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.shopping {
+  display:flex;
+  margin-bottom: 55px;
+}
+.shopping-item{
+    flex:1;
+    text-align: center;
+    border-right: 1px solid palevioletred;
+}
+.shopping-item:last-child{
+    border:0;
+}
+.shopping-info h3{
+    font-size: 17px;
+}
+.shopping-info span{
+    color: gray;
+    font-size: 15px;
+}
+.shopping-icon{
+    background-image: url(../images/11111.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+.icon-1{
+background-position: center 2px;
+transition: all .5s;
+}
+.shopping-item:hover .icon-1{
+    background-position: center -90px;
+}
+.icon-2{
+background-position: center -183px;
+transition: all .5s;
+}
+.shopping-item:hover .icon-2{
+    background-position: center -277px;
+}
+.icon-3{
+background-position: center -369px;
+transition: all .5s;
+}
+.shopping-item:hover .icon-3{
+    background-position: center -460px;
+}
+.icon-4{
+background-position: center -555px;
+transition: all .5s;
+ }
+ .shopping-item:hover .icon-4{
+    background-position: center -645px;
+}
+.icon-5{
+background-position: center -737px;
+transition: all .5s;
+}
+.shopping-item:hover .icon-5{
+    background-position: center -830px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.list-brand{
+    display: flex;
+    justify-content: center;
+}
+.list-brand li{
+    margin: 10px 20px;
+}
+.div-item{
+    margin-top: 50px;
+   margin-left: 170px;
+float: left;
+}
+.div-item:hover .div-overlay{
+    transform: scalex(1);
+}
+.products-items{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-gap:20px;
+ margin: 30px 0px;
+}
+.div-img{
+ position: relative; 
+}
+.div-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:scalex(0);
+    opacity: 0.9;
+    transition: transform 0.2s;
+}
+.div-overlay ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.div-overlay ul li{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+ .div-overlay ul li i{
+    color: #7c0570;
+    line-height: 30px;
+    font-size: 30px;
+} 
+.div-info span{
+    display:block;
+    margin: 5px 0;
+    font-size: 30px
+}
+.div-info h3{
+    font-size: x-large;
+    color: #7c0570;
+}
+.div-info button{
+width: 130px;
+height: 40px;
+background-color:rgb(249, 143, 161);
+color: #f7f3ef;
+border-radius: 10px;
+border: none;
+}
